@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@tatumio/tatum": "^1.9.9"
+  }
+}
