@@ -1,16 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-  
-);
+import Home from './Home';
+import OrderBook from './OrderBook';
+import TradeHistory from './TradeHistory';
+import UserProfile from './UserProfile';
 
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/order-book" component={OrderBook} />
+        <Route path="/trade-history" component={TradeHistory} />
+        <Route path="/user-profile" component={UserProfile} />
+      </Switch>
+    </Router>
+  );
+}
 
-reportWebVitals();
+export default App;
